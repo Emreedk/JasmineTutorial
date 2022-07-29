@@ -165,12 +165,5 @@ describe('Calculator.js', function () {
       });
     });
 
-    describe('get Version', function () {
-      it('fetches version from external source', async function () {
-        spyOn(window, 'fetch').and.returnValue(Promise.resolve(new Response('{"version": "0.4"}')));
-        const version = await calculator.version;
-        expect(version).toBe('0.4');
-      });
-    });
   });
 });

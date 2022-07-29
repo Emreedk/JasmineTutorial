@@ -26,6 +26,7 @@ describe('main.js', function () {
 
     it('Calls add', function () {
       const spy = spyOn(Calculator.prototype, 'add');
+      
       calculate('3+2');
 
       expect(spy).toHaveBeenCalled();
@@ -114,31 +115,18 @@ describe('main.js', function () {
       document.body.appendChild(element);
       this.element = element;
     });
+
+    
     afterAll(function () {
       document.body.removeChild(this.element);
     });
+
+
     it('add result to the dom element', function () {
       updateResult('5');
       expect(this.element.innerText).toBe('5');
     });
   });
 
-  describe('showVersion()', function () {
-    it('should call the showversion method', function (done) {
-      const element = spyOn(document, 'getElementById').and.returnValue({
-        innerText: null
-      });
-      const spy = spyOnProperty(Calculator.prototype, 'version', 'get').and.returnValue(
-        Promise.resolve('0.9')
-      );
-
-      showVersion();
-      expect(spy).toHaveBeenCalled();
-      expect(spy).toHaveBeenCalledTimes(1);
-      spy().then(function (version) {
-        expect(element().innerText).toBe(version);
-        done();
-      });
-    });
-  });
+  
 });

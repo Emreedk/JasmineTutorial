@@ -6,16 +6,7 @@
   "scripts": {
     "test": "karma start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leelanarasimha/simple-calculator.git"
-  },
-  "author": "LeelaWebDev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leelanarasimha/simple-calculator/issues"
-  },
-  "homepage": "https://github.com/leelanarasimha/simple-calculator#readme",
+ 
   "devDependencies": {
     "jasmine-core": "^4.0.1",
     "karma": "^6.4.0",
@@ -26,3 +17,4 @@
     "puppeteer": "^13.4.0"
   }
 }
+
